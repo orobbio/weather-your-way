@@ -4,7 +4,7 @@ function initMap() {
             lat: lat,
             lng: lng
         },
-        zoom: 10
+        zoom: 15
     });
 }
 
@@ -25,38 +25,55 @@ function getWeather() {
         var time = response.currently.time;
         var icon = response.currently.icon;
 
+        $(".test").empty();
+
+        var empStartPretty = moment.unix(time).format("MM/DD/YYYY hh:mm:ss");
+        console.log(empStartPretty);
+        var localTIme = $("<p>");
+        localTIme.text(empStartPretty);
+
         var img = $("<img>");
         img.attr("src", "https://darksky.net/images/weather-icons/" + icon + ".png");
         $(".test").append(img);
+        $(".test").append(localTIme);
+
+
         console.log(time);
-        var empStartPretty = moment.unix(time).format("MM/DD/YYYY hh:mm:ss");
-        console.log(empStartPretty);
+        v
 
     });
 
 }
-var city = $("#").val().trim();
-
-var queryURL =
-    "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyB5dx1l-uXDBY9Yg8GpMePGvo_QV_VoF1c"
 
 var lat = 0;
 var lng = 0;
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function (response) {
 
-    console.log(response.results[0].geometry.location);
-    lat = response.results[0].geometry.location.lat;
-    lng = response.results[0].geometry.location.lng;
-    console.log(lat);
-}).then(function () {
+$("#addCity").on("click", function (event) {
+    var city = $("#cityText").val().trim();
 
-    getWeather();
+    $("#cityText").val("");
 
-}).then(function () {
+    var queryURL =
+        "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyB5dx1l-uXDBY9Yg8GpMePGvo_QV_VoF1c"
 
-    var map;
-    initMap();
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+
+        console.log(response.results[0].geometry.location);
+        lat = response.results[0].geometry.location.lat;
+        lng = response.results[0].geometry.location.lng;
+        console.log(lat);
+    }).then(function () {
+
+        getWeather();
+
+    }).then(function () {
+
+        var map;
+        initMap();
+    });
+
 });

@@ -14,6 +14,20 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+    #mapInfo {
+        height: 100%;
+    }
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+
 </head>
 
 <body>
@@ -77,9 +91,9 @@
         <!-- city input -->
         <div class="input-group cityInput">
 
-            <input type="text" class="form-control " aria-label="Text input with segmented dropdown button">
+            <input type="text" class="form-control " aria-label="Text input with segmented dropdown button" id="cityText">
             <div class="input-group-append">
-                <button type="button" class="btn btn-outline-secondary">Go</button>
+                <button type="button" class="btn btn-outline-secondary" id="addCity">Go</button>
             </div>
         </div>
 
@@ -91,16 +105,18 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Today Traffic Conditions</h5>
-                        <p class="card-text" id="mapInfo">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text" id="map">With supporting text below as a natural lead-in to additional content.</p>
                         
                     </div>
                 </div>
+                <div id="mapInfo"></div>
             </div>
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Wheather forcast</h5>
+                        <h5 class="card-title">Weather forcast</h5>
                         <p class="card-text" id="weatherInfo"> With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="test"></div>
                         
                     </div>
                 </div>
@@ -112,15 +128,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
         </script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5dx1l-uXDBY9Yg8GpMePGvo_QV_VoF1c&callback=initMap"
+        async defer></script>
+        <script type="text/javascript" src="assets/js/wyw.js"></script>
 </body>
 
 </html>
