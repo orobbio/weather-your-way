@@ -6,6 +6,8 @@ function initMap() {
         },
         zoom: 15
     });
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
 }
 
 function getWeather() {
@@ -24,6 +26,7 @@ function getWeather() {
         console.log(response);
         var time = response.currently.time;
         var icon = response.currently.icon;
+        var temp = response.currently.temperature;
 
         $(".test").empty();
 
@@ -31,6 +34,7 @@ function getWeather() {
         console.log(empStartPretty);
         var localTIme = $("<p>");
         localTIme.text(empStartPretty);
+        var tempT = $("<p>")
 
         var img = $("<img>");
         img.attr("src", "https://darksky.net/images/weather-icons/" + icon + ".png");
