@@ -26,20 +26,57 @@ function getWeather() {
         console.log(response);
         var time = response.currently.time;
         var icon = response.currently.icon;
-        var temp = response.currently.temperature;
+        var temp = Math.round(response.currently.temperature);
 
         $(".test").empty();
 
-        var empStartPretty = moment.unix(time).format("MM/DD/YYYY hh:mm:ss");
+        var empStartPretty = moment.unix(time).format("LT");
         console.log(empStartPretty);
         var localTIme = $("<p>");
-        localTIme.text(empStartPretty);
-        var tempT = $("<p>")
+        localTIme.text("Local Time: " + empStartPretty);
+        var tempT = $("<p>");
+        tempT.text("Temperature: " + temp + "°");
 
         var img = $("<img>");
         img.attr("src", "https://darksky.net/images/weather-icons/" + icon + ".png");
         $(".test").append(img);
         $(".test").append(localTIme);
+        $(".test").append(tempT);
+
+        var extended = $("<table>");
+        $(".test").append(extended);
+
+        var head = $("<thead>");
+        var headRow = $("<tr>");
+        var headTime = $("<th>Hour</th>");
+        var headTemp = $("<th>Temperature</th>");
+        var headIcon = $("<th>");
+        headRow.append(headTime, headTemp, headIcon);
+        head.append(headRow);
+        extended.append(head);
+
+        var tbody = $("<tbody>");
+        extended.append(tbody);
+        
+
+        for(var i = 1; i < 6; i++){
+            var newHR = $("<tr>");
+            
+            var HRTime = $("<td>").text(moment.unix(response.hourly.data[i].time).format("LT"));
+            var HRTemp = $("<td>").text(Math.round(response.hourly.data[i].temperature) + "°");
+            var HRIcon = $("<img>");
+            var icon = response.hourly.data[i].icon;
+            HRIcon.attr("src", "https://darksky.net/images/weather-icons/" + icon + ".png");
+            HRIcon.attr("width", "50px");
+            HRIcon.attr("height", "50px");
+
+
+            
+            newHR.append(HRTime, HRTemp, HRIcon);
+            tbody.append(newHR);
+
+        }
+
 
 
         console.log(time);
