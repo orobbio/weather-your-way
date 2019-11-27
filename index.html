@@ -12,8 +12,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <!-- Embedded CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Your Way</title>
     <style>
     #mapInfo {
         height: 100%;
@@ -21,17 +22,15 @@
 
     html,
     body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     }
-</style>
-
-
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +66,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
-    </nav>
+    </nav> -->
     <br>
     <div class="container">
 
@@ -77,11 +76,12 @@
                 font-family: 'Calistoga', cursive;
             }
         </style>
-        <h3>Your Premier Wheather and Traffic Center</h3>
+        
+        <h3>Your Premier Weather and Traffic Center</h3>
         <br>
 
         <!-- insert display photo  -->
-        <div class="container">
+        <div class="container-fluid">
             <img src="https://mms.businesswire.com/media/20160830005464/en/541574/5/TTWN_Logo1.jpg" alt=""
                 class="img-fluid" alt="Responsive image">
         </div>
@@ -90,36 +90,38 @@
 
         <!-- city input -->
         <div class="input-group cityInput">
-
-            <input type="text" class="form-control " aria-label="Text input with segmented dropdown button" id="cityText">
+            <form>
+            <input size="1000" type="text" class="form-control " aria-label="Text input with segmented dropdown button" id="cityText">
             <div class="input-group-append">
-                <button type="button" class="btn btn-outline-secondary" id="addCity">Go</button>
+              <button type="submit" class="btn btn-outline-secondary" id="addCity">Go</button>
             </div>
+            </form> 
         </div>
-        <div class="row" id="buttonRow">for previous city</div>
+        <hr class="my-4">
+        <div class="row" id="buttonRow"></div>
         <br>
-
+        
         <!-- images  -->
         <div class="row">
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title" id="traffic">Today's Traffic Conditions</h5>
-                        <p class="card-text" id="map">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text" id="map"></p>
                         
                     </div>
                 </div>
                 <div id="mapInfo"></div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="weatherCard">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" id="weather">Weather forcast</h5>
-                        <p class="card-text" id="weatherInfo"> With supporting text below as a natural lead-in to additional content.</p>
-                        <div class="test"></div>
-                        
+                        <h5 class="card-title" id="weather">Weather Forecast</h5>
+                        <p class="card-text" id="weatherInfo"> </p>
+                
                     </div>
                 </div>
+                <div class="test"></div>
             </div>
         </div>
 

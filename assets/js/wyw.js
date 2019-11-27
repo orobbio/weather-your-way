@@ -136,7 +136,7 @@ function buttonWeather() {
     city = $(this).attr("data-name");
 
     $("#traffic").text("Today's Traffic Conditions in " + city);
-    $("#weather").text("Weather forcast in " + city);
+    $("#weather").text("Weather Forecast in " + city);
 
     var queryURL =
         "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=AIzaSyB5dx1l-uXDBY9Yg8GpMePGvo_QV_VoF1c"
@@ -172,7 +172,7 @@ $("#addCity").on("click", function (event) {
     });
 
     $("#traffic").text("Today's Traffic Conditions in " + city);
-    $("#weather").text("Weather forcast in " + city);
+    $("#weather").text("Weather Forecast in " + city);
 
     $("#cityText").val("");
     createButtons();
