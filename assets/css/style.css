@@ -1,24 +1,27 @@
 #city-name {
-
     margin: 10px
 }
 
 #weatherCard {
     text-align: center;
-   
 }
 
 table {
     margin: auto;
-
 }
 
 h5{
     text-align: center;
 }
+
 #addCity{
-    
     margin-left: auto;
-  
-    
 }
+
+/* h3{
+    font-family: 'Calistoga', cursive;
+}
+
+h4 {
+    font-family: 'Calistoga', cursive;
+} */
