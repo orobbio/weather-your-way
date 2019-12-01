@@ -14,6 +14,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Embedded CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+
     <title>Weather Your Way</title>
     <style>
     #mapInfo {
@@ -77,13 +79,13 @@
             }
         </style>
         
-        <h3>Your Premier Weather and Traffic Center</h3>
+        <h3 class="butt">Premier Weather and Traffic Center</h3>
         <br>
 
         <!-- insert display photo  -->
         <div class="container">
             <img src="https://mms.businesswire.com/media/20160830005464/en/541574/5/TTWN_Logo1.jpg" alt=""
-                class="img-fluid" alt="Responsive image">
+                class="img-fluid animated zoomInDown" alt="Responsive image">
         </div>
 
         <br>
@@ -91,9 +93,9 @@
         <!-- city input -->
         <div class="input-group cityInput">
             <form>
-            <input size="1000" type="text" class="form-control " aria-label="Text input with segmented dropdown button" id="cityText">
+            <input size="1000" type="text" class="form-control buttBorder" aria-label="Text input with segmented dropdown button" id="cityText">
             <div class="input-group-append">
-              <button type="submit" class="btn btn-outline-secondary" id="addCity">Go</button>
+              <button type="submit" class="btn btn-outline-secondary animated infinite slow heartBeat delay-5s" id="addCity">Go</button>
             </div>
             </form> 
         </div>
@@ -106,7 +108,7 @@
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" id="traffic">Today's Traffic Conditions</h5>
+                        <h5 class="card-title butter" id="traffic">Today's Traffic Conditions</h5>
                         <p class="card-text" id="map"></p>
                         
                     </div>
@@ -116,7 +118,7 @@
             <div class="col-sm-6" id="weatherCard">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title" id="weather">Weather Forecast</h5>
+                        <h5 class="card-title butter" id="weather">Weather Forecast</h5>
                         <p class="card-text" id="weatherInfo"> </p>
                 
                     </div>
@@ -128,6 +130,7 @@
         <!-- Optional JavaScript -->
         <!-- Moment.js Reference -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 

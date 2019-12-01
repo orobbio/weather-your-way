@@ -25,3 +25,67 @@ h5{
 h4 {
     font-family: 'Calistoga', cursive;
 } */
+
+
+
+
+
+  .buttBorder { border-width: 2px;
+   
+  
+    border-color: #5eff35;
+  
+    cursor: pointer;
+    animation: hue 60s infinite linear;
+  }
+
+  .butter {
+   
+    color: #2f05c9;
+
+     
+  }
+  
+    .butt--primary {
+      background-color: #f35626;
+      color: #fff;
+    }
+ 
+ 
+    a:hover {
+      color: #f35626;
+    }
+ 
+    .butt { animation: hue 60s linear infinite;
+        animation-duration: 5s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        color: indigo;
+      }
+  
+  /*-----------------------------------*\
+    $ANIMATIONS
+  \*-----------------------------------*/
+  
+  @keyframes hue {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    
+    to {
+      filter: hue-rotate(-360deg);
+    }
+    
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 60%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
