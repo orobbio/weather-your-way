@@ -68,6 +68,7 @@ function getWeather() {
         var temp = Math.round(response.currently.temperature);
 
         $(".test").empty();
+        $(".darksky").empty();
 
         var empStartPretty = moment.unix(time).format("LT");
         console.log(empStartPretty);
@@ -96,6 +97,12 @@ function getWeather() {
 
         var tbody = $("<tbody>");
         extended.append(tbody);
+
+        var imgDS = $("<img>");
+        imgDS.attr("src", "https://darksky.net/dev/img/attribution/poweredby.png");
+        imgDS.attr("width", "325px");
+        imgDS.attr("height", "150px");
+        $(".darksky").append(imgDS);
 
 
         for (var i = 1; i < 6; i++) {
@@ -163,6 +170,7 @@ function buttonWeather() {
 };
 
 $("#addCity").on("click", function (event) {
+    event.preventDefault();
     city = $("#cityText").val().trim();
     cityList.push(city);
 

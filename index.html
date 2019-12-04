@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="./assets/css/reset.css">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 
@@ -14,61 +16,23 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Embedded CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/animate.css">
 
     <title>Weather Your Way</title>
     <style>
-    #mapInfo {
-        height: 100%;
-    }
+        #mapInfo {
+            height: 100%;
+        }
 
-    html,
-    body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    }
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav> -->
     <br>
     <div class="container">
 
@@ -78,7 +42,7 @@
                 font-family: 'Calistoga', cursive;
             }
         </style>
-        
+
         <h3 class="butt">Premier Weather and Traffic Center</h3>
         <br>
 
@@ -93,37 +57,40 @@
         <!-- city input -->
         <div class="input-group cityInput">
             <form>
-            <input size="1000" type="text" class="form-control buttBorder" aria-label="Text input with segmented dropdown button" id="cityText">
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-outline-secondary animated infinite slow heartBeat delay-5s" id="addCity">Go</button>
-            </div>
-            </form> 
+                <input size="1000" type="text" class="form-control buttBorder"
+                    aria-label="Text input with segmented dropdown button" id="cityText">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary animated infinite slow heartBeat delay-5s"
+                        id="addCity">Go</button>
+                </div>
+            </form>
         </div>
         <hr class="my-4">
         <div class="row" id="buttonRow"></div>
         <br>
-        
+
         <!-- images  -->
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-12">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title butter" id="traffic">Today's Traffic Conditions</h5>
-                        <p class="card-text" id="map"></p>
-                        
+                        <span class="card-text" id="map"></span>
+
                     </div>
                 </div>
                 <div id="mapInfo"></div>
             </div>
-            <div class="col-sm-6" id="weatherCard">
+            <div class="col-sm-6 col-12" id="weatherCard">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title butter" id="weather">Weather Forecast</h5>
-                        <p class="card-text" id="weatherInfo"> </p>
-                
+                        <span class="card-text" id="weatherInfo"> </span>
+
                     </div>
                 </div>
                 <div class="test"></div>
+                <div class="darksky"></div>
             </div>
         </div>
 
@@ -146,8 +113,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5dx1l-uXDBY9Yg8GpMePGvo_QV_VoF1c&callback=initMap"
-        async defer></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5dx1l-uXDBY9Yg8GpMePGvo_QV_VoF1c&callback=initMap"
+            async defer></script>
         <script type="text/javascript" src="assets/js/wyw.js"></script>
 </body>
 
