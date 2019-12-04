@@ -56,12 +56,14 @@ h4 {
       color: #f35626;
     }
  
-    .butt { animation: hue 60s linear infinite;
+    .butt { 
+        animation: hue 60s linear infinite;
         animation-duration: 5s;
         animation-name: slidein;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         color: indigo;
+        max-width: 45%;
       }
   
   /*-----------------------------------*\
