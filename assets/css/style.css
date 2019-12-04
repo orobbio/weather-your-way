@@ -42,6 +42,7 @@ h4 {
   .butter {
    
     color: #2f05c9;
+    animation: hue 60s infinite linear;
 
      
   }
@@ -78,7 +79,18 @@ h4 {
     to {
       filter: hue-rotate(-360deg);
     }
+  }
+    @-webkit-keyframes hue{ 
+      from {
+      filter: hue-rotate(0deg);
+    }
     
+    to {
+      filter: hue-rotate(-360deg);
+    }
+
+    
+
   }
   @keyframes slidein {
     from {
@@ -91,3 +103,17 @@ h4 {
       width: 100%;
     }
   }
+  @-webkit-keyframes slidein{ 
+    from {
+      margin-left: 60%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+
+    }
+
+}
+  
