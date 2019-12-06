@@ -1,119 +1,110 @@
 #city-name {
-    margin: 10px
+  margin: 10px
 }
 
 #weatherCard {
-    text-align: center;
+  text-align: center;
 }
 
 table {
-    margin: auto;
+  margin: auto;
 }
 
-h5{
-    text-align: center;
+h5 {
+  text-align: center;
 }
 
-#addCity{
-    margin-left: auto;
+#addCity {
+  margin-left: auto;
 }
 
-/* h3{
-    font-family: 'Calistoga', cursive;
+.buttBorder {
+  border-width: 2px;
+
+
+  border-color: #5eff35;
+
+  cursor: pointer;
+  animation: hue 60s infinite linear;
 }
 
-h4 {
-    font-family: 'Calistoga', cursive;
-} */
+.butter {
+
+  color: #2f05c9;
+  animation: hue 60s infinite linear;
 
 
+}
+
+.butt--primary {
+  background-color: #f35626;
+  color: #fff;
+}
 
 
+a:hover {
+  color: #f35626;
+}
 
-  .buttBorder { border-width: 2px;
-   
-  
-    border-color: #5eff35;
-  
-    cursor: pointer;
-    animation: hue 60s infinite linear;
-  }
+.butt {
+  animation: hue 60s linear infinite;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: indigo;
+  max-width: 45%;
+}
 
-  .butter {
-   
-    color: #2f05c9;
-    animation: hue 60s infinite linear;
-
-     
-  }
-  
-    .butt--primary {
-      background-color: #f35626;
-      color: #fff;
-    }
- 
- 
-    a:hover {
-      color: #f35626;
-    }
- 
-    .butt { 
-        animation: hue 60s linear infinite;
-        animation-duration: 5s;
-        animation-name: slidein;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        color: indigo;
-        max-width: 45%;
-      }
-  
-  /*-----------------------------------*\
+/*-----------------------------------*\
     $ANIMATIONS
   \*-----------------------------------*/
-  
-  @keyframes hue {
-    from {
-      filter: hue-rotate(0deg);
-    }
-    
-    to {
-      filter: hue-rotate(-360deg);
-    }
-  }
-    @-webkit-keyframes hue{ 
-      from {
-      filter: hue-rotate(0deg);
-    }
-    
-    to {
-      filter: hue-rotate(-360deg);
-    }
 
-    
-
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
   }
-  @keyframes slidein {
-    from {
-      margin-left: 60%;
-      width: 300%; 
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-  @-webkit-keyframes slidein{ 
-    from {
-      margin-left: 60%;
-      width: 300%; 
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
 
-    }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(-360deg);
+  }
+
+
 
 }
-  
+
+@keyframes slidein {
+  from {
+    margin-left: 60%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 60%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+
+  }
+
+}
